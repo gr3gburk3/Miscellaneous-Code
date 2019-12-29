@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gregory</title>
+	<link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="gsb_site.css">
+</head>
+<body>
+	<nav class="top">
+		<a class="active" href="#home">Home</a>
+		<a href="aboutme">What You'll Find Here</a>
+		<a href="https://gr3gburk3com.wordpress.com/?theme_preview=true&iframe=true&frame-nonce=d395271bad" target="blank">The Coding Journey</a>
+		<a href="jiujitsu">The Mat Chronicles</a>
+	</nav>
+	<div class = "main container">
+	<aside class = "login">
+		<p> Login Here</p>
+	<form action = "/login" method = "post">
+	<input type = "text" name = "username" placeholder="Username">
+	<input name = "password" type = "password" placeholder="Password">
+	<button type = "submit">Submit</button>
+</form>
+<aside class = "fav sub">
+	<p> Favorite Technique</p>
+	<form id = "technique"  action = "#" method = "post">
+	<input type = 'text' name = "favoritetech" placeholder="Best Technique?">
+	<button type = "submit">Tapout</button>
+</form>
+</aside>
+</aside>
+
+<div class = "tapcancer">
+<iframe class width="500" height="300"
+src="https://www.youtube.com/embed/l2lsQljQ0bc?fbclid=IwAR1PWRnBPoS19tJRwjqrhJPHl0_DmkbLriryozWNJTucqD9zZzZ0jaWjzyo">
+</iframe>
+<p> Technique List</p>
+<ul id = 'subs'>
+</ul>
+</div>
+</div>
+<footer>
+	<nav class = "links">
+	<a href='https://twitter.com/GregStewBurke' target="blank">My Twitter</a>
+	<a href='https://www.youtube.com/channel/UCuN-bV2Mv4dJnh7_Y43a-Tg?view_as=subscriber' target="blank">My Youtube Channel</a>
+	<a href='https://www.instagram.com/gregorystewjitsu/'target="blank">My IG</a>
+	</nav>
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script>
+<script>
+$ (function () {
+	$('#technique').on("submit", function (event){
+    event.preventDefault();
+		let submission = $('input', this).val()
+		let tapOut = $('#subs')
+		tapOut.append($('<li></li>').text(submission))
+	})
+	})
+
+
+</script>
+</body>
+</html>
